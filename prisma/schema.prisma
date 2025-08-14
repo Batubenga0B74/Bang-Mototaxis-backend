@@ -13,12 +13,14 @@ datasource db {
    provider = "sqlite"
   url      = env("DATABASE_URL")
 }
-model Register {
+model register {
   id          String @id @default(uuid())
   nome        String
-  telefone    String
-  marca_moto  String
-  BI          String
   email       String
-  matricula   String
+  senha       String
+}
+model login{
+  id    String @id @default(uuid())
+  email  String
+  senha String
 }
